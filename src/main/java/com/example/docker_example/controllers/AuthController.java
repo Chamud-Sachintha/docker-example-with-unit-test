@@ -30,6 +30,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
+
   @Autowired
   AuthenticationManager authenticationManager;
 
@@ -61,7 +62,7 @@ public class AuthController {
 
     return ResponseEntity.ok(new JwtResponse(jwt, 
                          userDetails.getId(), 
-                         userDetails.getUsername(), 
+                         userDetails.getUsername(),
                          userDetails.getEmail(), 
                          roles));
   }
