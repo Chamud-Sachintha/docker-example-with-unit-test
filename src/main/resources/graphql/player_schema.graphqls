@@ -1,0 +1,13 @@
+type Player {
+    id: ID
+    name: String
+    email: String
+}
+
+extend type Query {
+    getPlayer(id: ID): Player
+}
+
+extend type Mutation {
+    registerPlayer(playerName: String!, playerEmail: String!): Player
+}
